@@ -19,4 +19,4 @@
 <h1>Events</h1>
 <p>We have two events: <b>app:foursquare_integrated</b> and <b>app:foursquare_canceled</b>.</p>
 <h1>Notes</h1>
-<p>If you wanna change the layou of window, you will need change the function <b>show</b>, in the <i>oauth_adapter.js</i> file.</p>
+<p>If you wanna change the layout of window, you will need change the function <b>show</b>, in the <i>oauth_adapter.js</i> file.</p>
