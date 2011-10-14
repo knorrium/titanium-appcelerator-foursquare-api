@@ -17,16 +17,16 @@
 <h1>Properties</h1>
 <p>This application works with a Property to save the AccessToken of the user, the name of property is <b>foursquare_token</b>.</p>
 <p>To get the token, you have to do this:</p>
-<code>var token = Ti.App.Properties.getString(<b>foursquare_token</b>);</code>
+<pre>var token = Ti.App.Properties.getString(<b>foursquare_token</b>);</pre>
 <h1>Events</h1>
 <p>We have two events: <b>app:foursquare_integrated</b> and <b>app:foursquare_canceled</b>.</p>
 <p>To use the events, in your project, you will use this:</p>
-<code>Ti.App.addEventListener(<b>app:foursquare_integrated</b>, function() {
+<pre>Ti.App.addEventListener(<b>app:foursquare_integrated</b>, function() {
 	saveYourToken();
 });
 
 Ti.App.addEventListener(<b>app:foursquare_canceled</b>, function() {
 	hideTheActivityIndicator();
-});</code>
+});</pre>
 <h1>Notes</h1>
 <p>If you wanna change the layout of window, you will need change the function <b>show</b>, in the <i>oauth_adapter.js</i> file.</p>
