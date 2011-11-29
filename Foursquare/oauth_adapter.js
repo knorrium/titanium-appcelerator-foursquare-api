@@ -16,7 +16,7 @@ var OAuthAdapter = function(_clientId, _clientSecret, _signatureMethod, _urlCall
          	   	accessToken = (Ti.App.Properties.getString("foursquare_token") == "") ? null : Ti.App.Properties.getString("foursquare_token");
     	};
 
-    	save = function() 
+    	save_foursquare = function() 
 	{
 		var foursquare = {
 			"foursquare_token": accessToken,
@@ -32,7 +32,7 @@ var OAuthAdapter = function(_clientId, _clientSecret, _signatureMethod, _urlCall
         	return ! (accessToken == null);
     	};
 
-	hide = function() 
+	hide_foursquare = function() 
 	{
 		winBase.close();
 		window = null;
@@ -75,8 +75,8 @@ var OAuthAdapter = function(_clientId, _clientSecret, _signatureMethod, _urlCall
 			if (regex.test(e.url) == true)
 			{
 				accessToken = e.url.substr(urlCallback.length + 15, e.url.length);
-				save();
-				hide();
+				save_foursquare();
+				hide_foursquare();
 			}
 		});
 
@@ -84,7 +84,7 @@ var OAuthAdapter = function(_clientId, _clientSecret, _signatureMethod, _urlCall
 
 		closeButton.addEventListener("click", function(e) {
 			Ti.App.fireEvent("app:foursquare_canceled");
-			hide();
+			hide_foursquare();
 		});
 
 		window.add(view);
