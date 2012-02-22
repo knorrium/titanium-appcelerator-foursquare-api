@@ -67,7 +67,7 @@ var OAuthAdapter = function(_clientId, _clientSecret, _signatureMethod, _urlCall
 
 		webView = Ti.UI.createWebView({
 			url: _url,
-			autoDetect: [Ti.UI.AUTODETECT_NONE]
+			autoDetect: [Ti.UI.iOS.AUTODETECT_NONE]
 		});
 
 		webView.addEventListener("load", function(e) {
